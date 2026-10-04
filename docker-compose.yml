@@ -1,0 +1,15 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      SHOPIFY_WEBHOOK_SECRET: ${SHOPIFY_WEBHOOK_SECRET:-development-secret}
+      SHOPIFY_STORE_ID: ${SHOPIFY_STORE_ID:-shopify}
+      TENANT_ID: ${TENANT_ID:-default}
+      DATABASE_PATH: /app/data/ai-city.db
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-}
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

@@ -1,0 +1,1 @@
+"""Core order automation primitives."""

@@ -218,3 +218,29 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local secrets and application data
+*.pem
+*.key
+*.db
+*.sqlite
+*.sqlite3
+data/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Terraform state and local configuration
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
